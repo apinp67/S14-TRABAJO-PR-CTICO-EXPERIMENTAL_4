@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block contenido %}<h1>{% if editando %}Editar{% else %}Crear{% endif %} registro</h1><form method="post" class="card p-4 form-panel">{% csrf_token %}{{ form.as_p }}<div><button class="btn btn-primary">Guardar</button> <a class="btn btn-secondary" href="{% url 'listado' modulo %}">Cancelar</a></div></form>{% endblock %}
